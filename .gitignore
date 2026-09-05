@@ -1,0 +1,27 @@
+build*/
+sdkconfig
+sdkconfig.old
+managed_components/
+__pycache__/
+*.pyc
+.env*
+*.local.json
+dist/
+
+# Private configuration, device dumps and captures are never source assets.
+*.bin
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.log
+*.pem
+*.key
+*.p12
+*.sqlite*
+*.db
+*.pcap*
+.DS_Store
+backups/
+private/
