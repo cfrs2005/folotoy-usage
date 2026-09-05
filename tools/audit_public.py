@@ -56,13 +56,14 @@ def main():
         if path.is_symlink() or any(parent.is_symlink() for parent in path.parents if parent != ROOT and ROOT in parent.parents):
             errors.append(f'{name}: symlink is not allowed'); continue
         check(name, path.read_bytes())
-    if args.git:
-        result = subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, check=True, capture_output=True)
+    if args.git or (ROOT / ".git").exists():
+        git = ["git", "-c", f"safe.directory={ROOT}"]
+        result = subprocess.run([*git, 'ls-files', '-z'], cwd=ROOT, check=True, capture_output=True)
         for raw_name in result.stdout.split(b'\0'):
             if not raw_name: continue
             name = raw_name.decode()
             if name not in allowed: errors.append(f'{name}: outside public source allowlist'); continue
-            data = subprocess.run(['git', 'show', ':'+name], cwd=ROOT, check=True, capture_output=True).stdout
+            data = subprocess.run([*git, 'show', ':'+name], cwd=ROOT, check=True, capture_output=True).stdout
             check('index:'+name, data)
     for path in args.artifact:
         if zipfile.is_zipfile(path):
