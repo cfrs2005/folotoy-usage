@@ -25,3 +25,6 @@ dist/
 .DS_Store
 backups/
 private/
+
+# Reviewed public illustration only; personal screenshots remain excluded.
+!docs/images/folotoy-usage-preview.png

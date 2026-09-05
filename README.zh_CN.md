@@ -8,6 +8,10 @@
 240 × 320 屏幕、8 MB Flash，无 PSRAM。这是独立固件工程，构建不依赖
 旁边的故事机目录或私有云端源码。
 
+![FoloToy Usage 双页展示：额度首页与用量页](docs/images/folotoy-usage-preview.png)
+
+*脱敏效果示意：左侧为额度与重置倒计时，右侧为 Token 与 API 等价费用。头像和数值均为示例，不是实时账号数据。*
+
 - 浅色纸底、Claude 红色、Codex 蓝色，中文界面和个人头像。
 - 首页：头像、名称、本地年月日和时间，双平台额度大数字、进度条与重置倒计时。
 - 第二页：双平台的今日 / 累计 Token 与费用。使用独立的 IBM Plex Mono 数字字体与 Noto Sans SC 中文标签，原生尺寸渲染。

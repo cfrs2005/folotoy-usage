@@ -8,7 +8,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 FILES = ['CMakeLists.txt', 'sdkconfig.defaults', 'partitions.csv', 'dependencies.lock',
-         'LICENSE', 'README.md', 'README.zh_CN.md', 'SECURITY.md', 'CONTRIBUTING.md', '.gitignore']
+         'LICENSE', 'README.md', 'README.zh_CN.md', 'SECURITY.md', 'CONTRIBUTING.md', '.gitignore',
+         'docs/images/folotoy-usage-preview.png']
 TREES = ['main', 'components/bsp', 'bootloader_components/recovery_boot_hook', 'tests', 'tools', 'assets/fonts', 'docs', '.github/workflows']
 SUFFIXES = {'.c', '.h', '.py', '.sh', '.yml', '.txt', '.md'}
 

@@ -11,6 +11,10 @@ An open-source UsageHub display for the FoloToy AI Passport: ESP32-C3,
 240 x 320 display, 8 MB flash, no PSRAM. This is a standalone firmware project.
 It builds without the adjacent story appliance or any private cloud source.
 
+![FoloToy Usage preview: quota and consumption pages](docs/images/folotoy-usage-preview.png)
+
+*Illustrative preview based on the final device UI. Left: quotas and reset times. Right: token usage and API-equivalent cost. The avatar and values are fictional, not live account data.*
+
 - Paper background, red Claude, blue Codex, Chinese labels and a personal profile.
 - Home shows your avatar, name, local date/time and both providers with large
   quota percentages, progress bars and reset countdowns.
